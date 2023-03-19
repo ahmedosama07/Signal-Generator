@@ -1,4 +1,4 @@
-function bPoints = breakpoints(breakpointsNumber, startTime, endTime)
+function bPoints = breakpoints(startTime, endTime, breakpointsNumber)
 %breakpoints Summary of this function goes here
 %   Function asks the user for breakpoints
 
