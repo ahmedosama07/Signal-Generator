@@ -6,7 +6,7 @@ degree = input("Degree: ");
 coeffenets = zeros(1, degree+1);
 polynomial = 0;
 for i=1:degree+1
-    coeffenets(i) = input("coeffecien t^" + i + ": ");
+    coeffenets(i) = input("coeffecien t^" + (degree+1-i) + ": ");
     polynomial = polynomial + coeffenets(i) * samplesTime.^((degree+1)-i);
 end
 end
