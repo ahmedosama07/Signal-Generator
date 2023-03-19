@@ -1,5 +1,5 @@
 clear;
-[samplingFrequency, startTime, endTime, breakpointsNumber]=start();
+[samplingFrequency, startTime, endTime, time, breakpointsNumber]=start();
 
 if (breakpointsNumber > 0)
     bPoints = breakpoints(startTime, endTime, breakpointsNumber);
@@ -8,3 +8,7 @@ else
 end
 
 signal = signalGenerator(samplingFrequency, startTime, endTime, bPoints);
+
+figure(1)
+plot(t,signal)
+title('Original Signal')
