@@ -1,7 +1,7 @@
 function [samplingFrequency, startTime, endTime, breakpointsNumber] = start()
 %start Summary of this function goes here
-%   Function asks user for basic information [sampling frequency, start and
-%   end time]
+%   Function asks user for basic information [sampling frequency, number of
+%   breakpoints, start and end times]
 clc;
 
 samplingFrequency = input("Sampling frequency: ");

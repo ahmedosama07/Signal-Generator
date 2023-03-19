@@ -1,6 +1,6 @@
 function ramp = rampSignal(samplesTime)
-%UNTITLED8 Summary of this function goes here
-%   Detailed explanation goes here
+%rampSignal Summary of this function goes here
+%   Function creates a ramp signal
 
 slope = input("Slope: ");
 intercept = input("Intercept: ");

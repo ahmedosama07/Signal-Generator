@@ -1,6 +1,6 @@
 function sincSignal = sincFunction(samplesTime)
-%UNTITLED11 Summary of this function goes here
-%   Detailed explanation goes here
+%sincFunction Summary of this function goes here
+%   Function creates sinc signal
 
 amplitude = input("Amplitude: ");
 centerShift = input("Center shift: ");
