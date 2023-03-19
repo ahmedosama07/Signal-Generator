@@ -1,1 +1,2 @@
-clean();
+clear;
+[f, s, e]=start();
