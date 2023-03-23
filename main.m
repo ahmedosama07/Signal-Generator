@@ -11,3 +11,5 @@ time = linspace(startTime, endTime,(endTime - startTime)*samplingFrequency );
 figure(1)
 plot(time, signal)
 title('Original Signal')
+
+[modifiedSignal,operationTime] = operations(signal,time);
