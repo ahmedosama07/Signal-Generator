@@ -1,12 +1,14 @@
 function [modifiedSignal,operationTime] = operations(signal,time)
 %OPERATIONS Summary of this function goes here
 %   function that handles operations.
+modifiedSignal = signal;
+operationTime = time;
 while 1 
+    clc;
     fprintf("1. Amplitude scaling\n2. Time reversal\n3. Time shift\n4. Expansion\n");
     fprintf("5. Compression\n6. Clipping\n7. first derivative\n8. None\n");
     operation = input("Please pick the operation you would like to perform, to exit select none\n");
 switch operation
-    
     case 1
         [modifiedSignal,operationTime] = AmplitudeScaling(signal,time);
     case 2

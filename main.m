@@ -1,3 +1,4 @@
+clear;
 [samplingFrequency, startTime, endTime, breakpointsNumber]=start();
 
 if (breakpointsNumber > 0)
