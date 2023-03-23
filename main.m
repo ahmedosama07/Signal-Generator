@@ -8,8 +8,16 @@ end
 
 signal = signalGenerator(samplingFrequency, startTime, endTime, bPoints, breakpointsNumber);
 time = linspace(startTime, endTime,(endTime - startTime)*samplingFrequency );
-figure(1)
-plot(time, signal)
-title('Original Signal')
+figure(1);
+plot(time, signal);
+title('Original Signal');
 
 [modifiedSignal,operationTime] = operations(signal,time);
+
+figure(1);
+subplot(2, 1, 1);
+plot(time, signal);
+title('Original Signal');
+subplot(2, 1, 2);
+plot(operationTime, modifiedSignal);
+title('Modified Signal');

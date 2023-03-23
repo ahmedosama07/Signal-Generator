@@ -24,7 +24,7 @@ switch operation
     case 8
         break;
 end
-    plot(operationTime,modifiedSignal);
+    %plot(operationTime,modifiedSignal);
     signal = modifiedSignal;
     time = operationTime;
 end
@@ -57,8 +57,8 @@ function [modifiedSignal,operationTime] = Clipping(signal,time)
     upperBound = input("Upper bound:");
     lowerBound = input("Lower bound:");
     modifiedSignal = signal;
-    modifiedSignal(find(signal>upperBound))=upperBound;
-    modifiedSignal(find(signal<lowerBound))=lowerBound;
+    modifiedSignal(signal>upperBound)=upperBound;
+    modifiedSignal(signal<lowerBound)=lowerBound;
     operationTime = time;
 end
 function [modifiedSignal,operationTime] = FirstDerivative(signal,time)
