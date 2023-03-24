@@ -14,7 +14,6 @@ plot(time, signal);
 title('Original Signal');
 
 [modifiedSignal,operationTime] = operations(signal,time);
-
 figure(1);
 subplot(2, 1, 1);
 plot(time, signal);
