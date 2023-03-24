@@ -43,6 +43,7 @@ switch operation
 end
     n = n + 1;
     plot(operationTime,modifiedSignal);
+    ylim([min([min(signal) min(modifiedSignal)]) max([max(signal) max(modifiedSignal)])]);
     signal = modifiedSignal;
     time = operationTime;
 end

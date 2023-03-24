@@ -20,4 +20,5 @@ plot(time, signal);
 title('Original Signal');
 subplot(2, 1, 2);
 plot(operationTime, modifiedSignal);
+ylim([min([min(signal) min(modifiedSignal)]) max([max(signal) max(modifiedSignal)])]);
 title('Modified Signal');
