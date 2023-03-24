@@ -3,6 +3,7 @@ function [modifiedSignal,operationTime] = operations(signal,time)
 %   function that handles operations.
 modifiedSignal = signal;
 operationTime = time;
+n = 2;
 while 1 
     clc;
     fprintf("1. Amplitude scaling\n2. Time reversal\n3. Time shift\n4. Expansion\n");
@@ -11,59 +12,43 @@ while 1
 switch operation
     case 1
         [modifiedSignal,operationTime] = AmplitudeScaling(signal,time);
+        figure(n);
+        title("Amplitude Scale");
     case 2
         [modifiedSignal,operationTime] = TimeReversal(signal,time);
+        figure(n);
+        title("Time Reversal");
     case 3
         [modifiedSignal,operationTime] = TimeShift(signal,time);
+        figure(n);
+        title("Time Shift");
     case 4
         [modifiedSignal,operationTime] = Expansion(signal,time);
+        figure(n);
+        title("Expantsion");
     case 5
         [modifiedSignal,operationTime] = Compression(signal,time);
+        figure(n);
+        title("Compression");
     case 6
         [modifiedSignal,operationTime] = Clipping(signal,time);
+        figure(n);
+        title("Clipping");
     case 7
         [modifiedSignal,operationTime] = FirstDerivative(signal,time);
+        figure(n);
+        title("First Derivative");
     case 8
         break;
 end
-    %plot(operationTime,modifiedSignal);
+    n = n + 1;
+    plot(operationTime,modifiedSignal);
     signal = modifiedSignal;
     time = operationTime;
 end
 end
-function [modifiedSignal,operationTime] = AmplitudeScaling(signal,time)
-    scaleValue = input("Scale value:");
-    modifiedSignal = signal*scaleValue;
-    operationTime = time;
-end
-function [modifiedSignal,operationTime] = TimeReversal(signal,time)
-    modifiedSignal = signal(end:-1:1);
-    operationTime = time;
-end
-function [modifiedSignal,operationTime] = TimeShift(signal,time)
-    shiftValue = input("Shift value:");
-    modifiedSignal = signal;
-    operationTime = time+shiftValue;
-end
-function [modifiedSignal,operationTime] = Expansion(signal,time)
-    expansionFactor = input("Expansion factor:");
-    modifiedSignal = resample(signal,expansionFactor,1);
-    operationTime = linspace(time(1)*expansionFactor,time(end)*expansionFactor,length(time)*expansionFactor);
-end
-function [modifiedSignal,operationTime] = Compression(signal,time)
-    compressionFactor = input("compression factor:");
-    modifiedSignal = resample(signal,1,compressionFactor);
-    operationTime = linspace(time(1)*1/compressionFactor,time(end)*1/compressionFactor,length(time)/compressionFactor);
-end
-function [modifiedSignal,operationTime] = Clipping(signal,time)
-    upperBound = input("Upper bound:");
-    lowerBound = input("Lower bound:");
-    modifiedSignal = signal;
-    modifiedSignal(signal>upperBound)=upperBound;
-    modifiedSignal(signal<lowerBound)=lowerBound;
-    operationTime = time;
-end
-function [modifiedSignal,operationTime] = FirstDerivative(signal,time)
-    modifiedSignal = (length(time)/(abs(time(1)-time(end))))*diff(signal);
-    operationTime = time(1:end-1);
-end
+
+
+
+
+
