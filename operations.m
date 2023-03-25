@@ -19,36 +19,20 @@ n = 2;
 switch operation
     case 1
         [modifiedSignal,operationTime] = AmplitudeScaling(signal,time);
-        figure(n);
-        title("Amplitude Scale");
     case 2
         [modifiedSignal,operationTime] = TimeReversal(signal,time);
-        figure(n);
-        title("Time Reversal");
     case 3
         [modifiedSignal,operationTime] = TimeShift(signal,time);
-        figure(n);
-        title("Time Shift");
     case 4
         [modifiedSignal,operationTime] = Expansion(signal,time);
-        figure(n);
-        title("Expantsion");
     case 5
         [modifiedSignal,operationTime] = Compression(signal,time);
-        figure(n);
-        title("Compression");
     case 6
         [modifiedSignal,operationTime] = Clipping(signal,time);
-        figure(n);
-        title("Clipping");
     case 7
         [modifiedSignal,operationTime] = FirstDerivative(signal,time);
-        figure(n);
-        title("First Derivative");
     case 8
 end
-    plot(operationTime,modifiedSignal);
-    ylim([min([min(signal) min(modifiedSignal)]) max([max(signal) max(modifiedSignal)])]);
 end
 
 
