@@ -14,7 +14,8 @@ end
 signal = [];
 for i = 1:breakpointsNumber+1
     samplesTime = linspace(breakPoints(i),breakPoints(i+1), (breakPoints(i+1) - breakPoints(i))*samplingFrequency);
-    signalType = input("Signal between " + breakPoints(i) + " and " + breakPoints(i+1) + ": ");
+    value = inputdlg("Signal between " + breakPoints(i) + " and " + breakPoints(i+1) + ": ");
+    signalType = str2num(value{1});
     portion = smallSignal(signalType, samplesTime);
     signal = [signal, portion];
 end

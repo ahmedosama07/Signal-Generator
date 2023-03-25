@@ -3,7 +3,7 @@ function dc = DCsignal(samplesTime)
 %   Function creates DC signal
 
 val = inputdlg("Amplitude: ");
-amplitude = str2num(val{1});
+amplitude = 
 dc = amplitude*ones(1,length(samplesTime));
 end
 
