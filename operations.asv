@@ -11,11 +11,12 @@ n = 2;
     formats(1,1).type   = 'list';
     formats(1,1).style = 'popupmenu';
     formats(1,1).items  = {'1. Amplitude scaling','2. Time reversal', '3. Time shift', '4. Expansion',...
-        '5. Compression', '6. Clipping', '7. First derivative', '8. None'};
+        '5. Compression', '6. Clipping', '7.Triangle pulse'};
     
     value = inputsdlg('Mdification: ', 'Signal operations', formats);
-    operation = value{1};
-    %operation = input("Please pick the operation you would like to perform, to exit select none\n");
+    %value = inputdlg("Signal between " + breakPoints(i) + " and " + breakPoints(i+1) + ": ");
+    signalType = value{1};
+    operation = input("Please pick the operation you would like to perform, to exit select none\n");
 switch operation
     case 1
         [modifiedSignal,operationTime] = AmplitudeScaling(signal,time);

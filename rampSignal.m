@@ -4,7 +4,9 @@ function ramp = rampSignal(samplesTime)
 
 
 prompt = {'Slope: ','Intercept: '};
-[slope, intercept] = inputdlg(prompt);
+val = inputdlg(prompt);
+slope = str2num(val{1});
+intercept = str2num(val{2});
 ramp = slope*samplesTime + intercept;
 end
 

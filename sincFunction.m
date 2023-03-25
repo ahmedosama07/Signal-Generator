@@ -3,7 +3,9 @@ function sincSignal = sincFunction(samplesTime)
 %   Function creates sinc signal
 
 prompt = {'Amplitude: ','Center shift: '};
-[amplitude, centerShift] = inputdlg(prompt);
+val = inputdlg(prompt);
+amplitude = str2num(val{1});
+centerShift = str2num(val{2});
 sincSignal = amplitude * sinc(samplesTime - centerShift);
 end
 
