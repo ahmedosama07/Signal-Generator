@@ -1,9 +1,0 @@
-function dc = DCsignal(samplesTime)
-%DCsignal Summary of this function goes here
-%   Function creates DC signal
-
-val = inputdlg("Amplitude: ");
-amplitude = 
-dc = amplitude*ones(1,length(samplesTime));
-end
-
