@@ -1,0 +1,18 @@
+Warning: 'SizeChangedFcn' callback will not execute while 'AutoResizeChildren' is set to 'on'.
+> In App/createComponents (line 109)
+In App (line 212)
+1. DC signal
+2. Ramp signal
+3. General order polynomial
+4. Exponential signal
+5. Sinusoidal signal
+6. Sinc function
+7. Triangle pulse
+1. Amplitude scaling
+2. Time reversal
+3. Time shift
+4. Expansion
+5. Compression
+6. Clipping
+7. first derivative
+8. None
